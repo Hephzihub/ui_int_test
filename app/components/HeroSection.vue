@@ -1,0 +1,36 @@
+<script setup lang="ts"></script>
+
+<template>
+  <section class="relative mb-20 md:mb-36 overflow-hidden bg-darkBg">
+    <div class="container mx-auto mt-60 mb-56">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="px-3.5">
+          <div class="*:text-white">
+            <h1 class="mb-4 text-6xl font-bold leading-tight">
+              Financial Security Made <span>Easier</span>
+            </h1>
+
+            <p>
+              Staco is the dedicated platform for human management that helps to
+              grow your startup business quickly
+            </p>
+
+            <div class="mt-8">
+              <button
+                class="bg-blue-600 text-white px-6 py-3 rounded-md mr-4 hover:bg-blue-700 transition"
+              >
+                Get Started
+              </button>
+              <button
+                class="bg-gray-200 text-gray-800 px-6 py-3 rounded-md hover:bg-gray-300 transition"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+</template>

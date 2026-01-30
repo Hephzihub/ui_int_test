@@ -30,9 +30,9 @@
     @apply font-sans text-black;
   }
 
-  body a {
+  /* body a {
     @apply font-bold;
-  }
+  } */
 
   h1,
   h2,
@@ -45,5 +45,5 @@
 }
 
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }

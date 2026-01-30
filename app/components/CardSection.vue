@@ -30,7 +30,7 @@ const cardData = [
 
 <template>
 <section class="pb-24.5">
-  <div class="container px-3.5 mx-auto">
+  <div class="container max-w-300 px-3.5 mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-7.5">
       <!-- duplicate 3 -->
       <div v-for="(item, index) in cardData" :key="index" class="group px-3.5">

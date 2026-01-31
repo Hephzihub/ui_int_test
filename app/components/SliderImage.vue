@@ -1,15 +1,19 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
-const textSwiper = ref(null);
-const activeSlide = ref(0);
+const textSwiper = ref<SwiperType | null>(null);
+const activeSlide = ref<number>(0);
 
-const slides = [
+interface Slide {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const slides: Slide[] = [
   {
     title: "Manage team increase productivity",
     description:
@@ -33,15 +37,15 @@ const slides = [
   },
 ];
 
-const onTextSwiper = (swiper) => {
+const onTextSwiper = (swiper: SwiperType) => {
   textSwiper.value = swiper;
 };
 
-const onSlideChange = (swiper) => {
+const onSlideChange = (swiper: SwiperType) => {
   activeSlide.value = swiper.activeIndex;
 };
 
-const goToSlide = (index) => {
+const goToSlide = (index: number) => {
   if (textSwiper.value) {
     textSwiper.value.slideTo(index);
   }
@@ -50,7 +54,7 @@ const goToSlide = (index) => {
 
 <template>
   <section class="pb-30 order-2 md:order-1">
-    <div class="container max-w-300 mx-auto px-4">
+    <div class="container lg:max-w-300 mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="px-3.75 order-2 md:order-1">
           <Swiper
@@ -106,8 +110,8 @@ const goToSlide = (index) => {
                 @click="goToSlide(0)"
               >
                 <img
-                  :src="slides[0].image"
-                  :alt="slides[0].title"
+                  :src="slides[0]?.image"
+                  :alt="slides[0]?.title"
                   class="w-full h-full object-cover"
                 />
                 <div v-if="activeSlide !== 0" class="absolute inset-0"></div>
@@ -124,8 +128,8 @@ const goToSlide = (index) => {
                 @click="goToSlide(1)"
               >
                 <img
-                  :src="slides[1].image"
-                  :alt="slides[1].title"
+                  :src="slides[1]?.image"
+                  :alt="slides[1]?.title"
                   class="w-full h-full object-cover"
                 />
                 <div v-if="activeSlide !== 1" class="absolute inset-0"></div>
@@ -142,8 +146,8 @@ const goToSlide = (index) => {
                 @click="goToSlide(2)"
               >
                 <img
-                  :src="slides[2].image"
-                  :alt="slides[2].title"
+                  :src="slides[2]?.image"
+                  :alt="slides[2]?.title"
                   class="w-full h-full object-cover"
                 />
                 <div v-if="activeSlide !== 2" class="absolute inset-0"></div>

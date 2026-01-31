@@ -11,5 +11,7 @@
     <SolidCTA />
 
     <SliderImage />
+
+    <!-- <TestimonialSlider /> -->
   </div>
 </template>

@@ -24,11 +24,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="relative -mt-28 mb-20 md:mb-36 overflow-hidden bg-darkBg">
+  <section class="relative md:-mt-28 mb-20 md:mb-36 overflow-hidden bg-darkBg">
     <div class="container lg:max-w-300 mx-auto mt-60 mb-56">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="px-3.5">
-          <div class="*:text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-5">
+        <div class="px-3.5" v-motion-slide-visible-once-bottom>
+          <div class="*:text-white" >
             <h1 class="mb-4 text-6xl font-bold leading-tight">
               Financial Security Made
               <span class="relative inline-block ml-2">
@@ -95,7 +95,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="ml-auto max-w-118 flex items-center justify-end relative">
+        <div class="ml-auto max-w-118 flex items-center justify-end relative" v-motion-slide-visible-once-bottom>
           <div class="h-85 relative overflow-hidden rounded-4xl">
             <video class="h-full w-full object-cover" loop autoplay playsinline>
               <source

@@ -48,7 +48,7 @@ const setActiveLink = (name: string) => {
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 py-4">
+  <header class="sticky top-0 z-50 py-4 hidden md:block">
     <div class="container mx-auto px-4">
       <div
         class="p-1 rounded-full bg-linear-to-br from-white/10 to-white/5 shadow-2xl w-fit mx-auto"

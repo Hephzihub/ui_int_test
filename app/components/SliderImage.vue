@@ -55,7 +55,7 @@ const goToSlide = (index: number) => {
 <template>
   <section class="pb-30 order-2 md:order-1">
     <div class="container lg:max-w-300 mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 items-center">
         <div class="px-3.75 order-2 md:order-1">
           <Swiper
             :modules="[Autoplay]"

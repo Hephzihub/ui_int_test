@@ -50,7 +50,7 @@ const footerLinks = [
               <div
                 class="container lg:max-w-300 mx-auto px-5 grid grid-cols-1 md:grid-cols-12 gap-10"
               >
-                <div class="col-span-4 px-3.75">
+                <div class="md:col-span-4 px-3.75">
                   <div class="mb-14">
                     <a class="inline-block w-fit mb-5" href="">
                       <Logo />
@@ -123,8 +123,8 @@ const footerLinks = [
                     </li>
                   </ul>
                 </div>
-                <div class="col-span-8 px-3.75">
-                  <div class="grid grid-cols-4">
+                <div class="md:col-span-8 px-3.75">
+                  <div class="grid gap-y-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
                     <div
                       v-for="(section, index) in footerLinks"
                       :key="index"
@@ -150,10 +150,10 @@ const footerLinks = [
             </div>
             <div class="py-5 border-t border-slate-50/25">
               <div
-                class="container lg:max-w-300 mx-auto px-5 flex flex-col md:flex-row justify-between items-center"
+                class="container lg:max-w-300 mx-auto px-5 flex flex-col-reverse gap-y-5 md:flex-row justify-between items-center"
               >
-                <p class="text-[#b0b8bd]">© 2024 Staco. All rights reserved.</p>
-                <div class="flex items-center gap-5 mt-3.75 md:mt-0">
+                <p class="text-[#b0b8bd] text-sm">© 2024 Staco. All rights reserved.</p>
+                <div class="flex items-center gap-5 mt-3.75 md:mt-0 *:text-sm">
                   <a href="#" class="text-[#b0b8bd] hover:text-white transition"
                     >Terms and Condition</a
                   >

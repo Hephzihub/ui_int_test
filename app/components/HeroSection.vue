@@ -35,7 +35,7 @@
               <source src="https://staco-react.vercel.app/assets/h6-video-DaLtBHE1.mp4">
             </video>
             <button class="absolute h-12.5 w-12.5 right-7.5 bottom-7.5 bg-white flex items-center justify-center text-olive-medium rounded-full">
-              <UIcon name="i-lucide-circle-pause" class="w-6 h-6"/>
+              <UIcon name="material-symbols-light:pause" class="w-6 h-6"/>
             </button>
           </div>
         </div>

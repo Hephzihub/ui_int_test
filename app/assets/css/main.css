@@ -42,6 +42,18 @@
   h6 {
     @apply font-header font-bold;
   }
+
+  .footerSocials {
+    @apply rounded-full border-2 transition duration-300 border-white/30 hover:border-white/70 flex items-center justify-center hover:bg-white/20 w-12 h-12 overflow-hidden;
+  }
+
+  .footerSocials svg {
+    @apply w-4 h-4 text-white transition
+  }
+
+  .footerSocials span {
+    @apply h-4.5 *:duration-150 *:transition
+  }
 }
 
 .container {

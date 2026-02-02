@@ -60,28 +60,68 @@ const footerLinks = [
                       that helps to grow your startup quickly
                     </p>
                   </div>
-                  <div class="flex items-center gap-5">
-                    <UIcon
-                      name="i-lucide-facebook"
-                      class="w-6 h-6 text-white hover:text-blue-600 transition cursor-pointer"
-                    />
-                    <UIcon
-                      name="i-lucide-twitter"
-                      class="w-6 h-6 text-white hover:text-blue-400 transition cursor-pointer"
-                    />
-                    <UIcon
-                      name="i-lucide-instagram"
-                      class="w-6 h-6 text-white hover:text-pink-500 transition cursor-pointer"
-                    />
-                    <UIcon
-                      name="i-lucide-linkedin"
-                      class="w-6 h-6 text-white hover:text-blue-700 transition cursor-pointer"
-                    />
-                    <UIcon
-                      name="i-lucide-youtube"
-                      class="w-6 h-6 text-white hover:text-blue-700 transition cursor-pointer"
-                    />
-                  </div>
+                  <ul class="flex items-center gap-5">
+                    <li>
+                      <a class="footerSocials group" href="#">
+                        <span>
+                          <IconFacebook
+                            class="group-hover:-translate-y-5 opacity-100 group-hover:opacity-0"
+                          />
+                          <IconFacebook
+                            class="translate-y-5 group-hover:-translate-y-3.75 group-hover:opacity-100 opacity-70"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="footerSocials group" href="#">
+                        <span>
+                          <IconX
+                            class="group-hover:-translate-y-5 opacity-100 group-hover:opacity-0"
+                          />
+                          <IconX
+                            class="translate-y-5 group-hover:-translate-y-3.75 group-hover:opacity-100 opacity-70"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="footerSocials group" href="#">
+                        <span>
+                          <IconLinkedIn
+                            class="group-hover:-translate-y-5 opacity-100 group-hover:opacity-0"
+                          />
+                          <IconLinkedIn
+                            class="translate-y-5 group-hover:-translate-y-3.75 group-hover:opacity-100 opacity-0"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="footerSocials group" href="#">
+                        <span>
+                          <IconInstagram
+                            class="group-hover:-translate-y-5 opacity-100 group-hover:opacity-0"
+                          />
+                          <IconInstagram
+                            class="translate-y-5 group-hover:-translate-y-3.75 group-hover:opacity-100 opacity-0"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="footerSocials group" href="#">
+                        <span>
+                          <IconYoutube
+                            class="group-hover:-translate-y-5 opacity-100 group-hover:opacity-0"
+                          />
+                          <IconYoutube
+                            class="translate-y-5 group-hover:-translate-y-3.75 group-hover:opacity-100 opacity-0"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="col-span-8 px-3.75">
                   <div class="grid grid-cols-4">

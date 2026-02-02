@@ -25,14 +25,13 @@ onMounted(() => {
 
 <template>
   <section class="relative md:-mt-28 mb-20 md:mb-36 overflow-hidden bg-darkBg">
-    <div class="container lg:max-w-300 mx-auto mt-60 mb-56">
+    <div class="container lg:max-w-300 mx-auto mt-20 md:mt-60 mb-30 md:mb-56">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-5">
         <div class="px-3.5" v-motion-slide-visible-once-bottom>
           <div class="*:text-white" >
             <h1 class="mb-4 text-6xl font-bold leading-tight">
               Financial Security Made
               <span class="relative inline-block ml-2">
-                <!-- The rotating word -->
                 <span
                   :key="currentWord"
                   class="transition-opacity duration-300"
@@ -41,7 +40,6 @@ onMounted(() => {
                   {{ currentWord }}
                 </span>
 
-                <!-- Animated underline -->
                 <span
                   :key="`underline-${currentWord}`"
                   class="absolute bottom-0 left-0 h-1 bg-linear-to-r from-olive-medium to-olive rounded-full"

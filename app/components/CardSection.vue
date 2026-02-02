@@ -44,7 +44,7 @@ const cardData = [
           </p>
 
           <div>
-            <a :href="item.link" class="flex justify-between items-center gap-5">
+            <a :href="item.link" class="flex justify-between items-center gap-5 font-medium">
               <span class="group-hover:text-green-500 duration-300 transition">Learn More</span>
               <div class="bg-[#0000001a] h-10 w-10 flex items-center justify-center rounded-full group-hover:bg-green-500 duration-300 transition">
                 <UIcon name="i-lucide-arrow-right" class="w-5 h-5 text-black group-hover:text-white group-hover:-rotate-45 duration-300 transition" />

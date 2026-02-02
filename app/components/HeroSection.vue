@@ -1,4 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const words = ["Easier", "Simple", "Secure", "Better", "Accessible"];
+const currentIndex = ref(0);
+const isAnimating = ref(false);
+
+const currentWord = computed(() => words[currentIndex.value]);
+
+onMounted(() => {
+  // Start the animation immediately
+  isAnimating.value = true;
+
+  // Change word every 3 seconds
+  setInterval(() => {
+    // Trigger exit animation
+    isAnimating.value = false;
+
+    // After a brief delay, change word and restart animation
+    setTimeout(() => {
+      currentIndex.value = (currentIndex.value + 1) % words.length;
+      isAnimating.value = true;
+    }, 300); // 300ms for fade out
+  }, 3000); // 3 seconds total duration
+});
+</script>
 
 <template>
   <section class="relative -mt-28 mb-20 md:mb-36 overflow-hidden bg-darkBg">
@@ -7,7 +30,24 @@
         <div class="px-3.5">
           <div class="*:text-white">
             <h1 class="mb-4 text-6xl font-bold leading-tight">
-              Financial Security Made <span>Easier</span>
+              Financial Security Made
+              <span class="relative inline-block ml-2">
+                <!-- The rotating word -->
+                <span
+                  :key="currentWord"
+                  class="transition-opacity duration-300"
+                  :class="isAnimating ? 'opacity-100' : 'opacity-0'"
+                >
+                  {{ currentWord }}
+                </span>
+
+                <!-- Animated underline -->
+                <span
+                  :key="`underline-${currentWord}`"
+                  class="absolute bottom-0 left-0 h-1 bg-linear-to-r from-olive-medium to-olive rounded-full"
+                  :class="isAnimating ? 'animate-grow-underline' : 'w-0'"
+                ></span>
+              </span>
             </h1>
 
             <p>
@@ -21,30 +61,35 @@
                 href="#"
               >
                 <span
-                  class="relative h-7 w-32 overflow-hidden flex items-center justify-center *:font-bold"
+                  class="relative h-7 w-32 overflow-hidden flex items-center justify-center *:font-medium"
                 >
                   <!-- Initial text (slides up and out on hover) -->
                   <span
-                    class="absolute w-full transition-all text-center duration-300 ease-in-out group-hover:-translate-y-8 group-hover:opacity-0"
+                    class="absolute w-full transition-all text-center duration-150 ease-in-out group-hover:-translate-y-8 group-hover:opacity-0"
                   >
                     Get Started
                   </span>
 
                   <!-- Hidden text (slides up from bottom on hover) -->
                   <span
-                    class="absolute w-full text-black text-center transition-all duration-300 ease-in-out translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                    class="absolute w-full text-black text-center transition-all duration-150 ease-in-out translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                   >
                     Get Started
                   </span>
                 </span>
               </a>
               <a
-                class="text-white px-6 py-3 bg-transparent group font-bold flex gap-3.5 items-center transition duration-300 hover:text-olive-medium"
+                class="text-white px-6 py-3 bg-transparent group font-medium flex gap-3.5 items-center transition duration-300 hover:text-olive-medium"
                 href="#"
               >
                 Let's Talk
-                <span class="bg-white/20 group-hover:bg-olive-medium rounded-full flex items-center justify-center transition duration-300 h-7.5 w-7.5">
-                  <UIcon name="lucide:chevron-right" class="text-white  transition duration-300 group-hover:-rotate-45" />
+                <span
+                  class="bg-white/20 group-hover:bg-olive-medium rounded-full flex items-center justify-center transition duration-300 h-7.5 w-7.5"
+                >
+                  <UIcon
+                    name="lucide:chevron-right"
+                    class="text-white transition duration-300 group-hover:-rotate-45"
+                  />
                 </span>
               </a>
             </div>
@@ -68,3 +113,18 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes growUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-grow-underline {
+  animation: growUnderline 2.7s linear forwards;
+}
+</style>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const headerGlassy = ref<HTMLElement | null>(null);
 const isHovering = ref(false);
-const activeLink = ref("Projects");
+const activeLink = ref("Home");
 
 const navItems = [
-  { name: "Projects", href: "#" },
-  { name: "Gallery", href: "#" },
-  { name: "Studio", href: "#" },
-  { name: "Profile", href: "#" },
+  { name: "Home", href: "#" },
+  { name: "About", href: "#" },
+  { name: "Services", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 const handleMouseEnter = (event: MouseEvent, itemName: string) => {

@@ -47,12 +47,10 @@ const slides = [
 ];
 
 const onTextSwiper = (swiper: SwiperType): void => {
-  console.log('Swiper initialized:', swiper);
   textSwiper.value = swiper;
 };
 
 const onSlideChange = (swiper: SwiperType): void => {
-  console.log('Slide changed to index:', swiper.activeIndex);
   activeSlide.value = swiper.activeIndex;
 };
 </script>

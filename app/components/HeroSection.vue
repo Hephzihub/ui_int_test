@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="relative mb-20 md:mb-36 overflow-hidden bg-darkBg">
+  <section class="relative -mt-28 mb-20 md:mb-36 overflow-hidden bg-darkBg">
     <div class="container lg:max-w-300 mx-auto mt-60 mb-56">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="px-3.5">
